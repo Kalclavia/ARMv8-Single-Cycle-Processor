@@ -1,0 +1,12 @@
+L1:  ADD X9, XZR, XZR	 	// Initialize X9 with an 0	DONE.  
+L2:  MOVZ X11, [0xDEF0, #0]	// MOVZ(lsl 0 bit) 0xDEF0 to X11
+L3:  ADD X9, X11, X9		// DONE
+L4:  MOVZ X11 [0x9abc, #1]
+L5:  ADD X9, X11, X9		// DONE
+L6:  MOVZ X11 [0x5678 #2]
+L7:  ADD X9, X11, X9		// DONE
+L8:  MOVZ X11 [0x1234 #3]
+L9:  ADD X9, X11, X9		// DONE
+L10: STUR X9, [XZR, 0x28]
+L11: LDUR X10, [XZR, 0x28] 
+
